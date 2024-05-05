@@ -19,7 +19,7 @@ Go to django side and type the following command
 1. install requirements
 
 ```CMD
-python pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 2.  migrate the project
