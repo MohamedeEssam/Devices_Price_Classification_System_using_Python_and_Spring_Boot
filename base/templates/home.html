@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Application</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        header {
+            background-color: beige;
+            color: black;
+            text-align: center;
+            font-size: 35px;
+            padding: 30px;
+        }
+        footer {
+            background-color: beige;
+            color: black;
+            text-align: center;
+            font-size: 25px;
+            padding: 10px;
+        }
+        body {
+            background-color: beige;
+        }
+
+    </style>
+</head>
+<body>
+    <header>Welcome In My Django Application</header>
+    <div class="container mt-5">
+        <h1>Devices Prices Classification</h1>
+        <hr>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="battery_power">Total energy a battery can store in one time measured in mAh:</label>
+                <input type="number" class="form-control" id="battery_power" name="battery_power" required>
+
+                <label for="blue">Has Bluetooth or not:</label>
+                <input type="number" class="form-control" id="blue" name="blue" required>
+
+                <label for="clock_speed">The speed at which the microprocessor executes instructions:</label>
+                <input type="number" class="form-control" id="clock_speed" name="clock_speed" required>
+
+                <label for="dual_sim">Has dual sim support or not:</label>
+                <input type="number" class="form-control" id="dual_sim" name="dual_sim" required>
+
+                <label for="fc">Front Camera megapixels:</label>
+                <input type="number" class="form-control" id="fc" name="fc" required>
+
+                <label for="four_g">Has 4G or not:</label>
+                <input type="number" class="form-control" id="four_g" name="four_g" required>
+
+                <label for="int_memory">Internal Memory in Gigabytes:</label>
+                <input type="number" class="form-control" id="int_memory" name="int_memory" required>
+
+                <label for="m_dep">Mobile Depth in cm:</label>
+                <input type="number" class="form-control" id="m_dep" name="m_dep" required>
+
+                <label for="mobile_wt">Weight of mobile phone:</label>
+                <input type="number" class="form-control" id="mobile_wt" name="mobile_wt" required>
+
+                <label for="n_cores">Number of cores of the processor:</label>
+                <input type="number" class="form-control" id="n_cores" name="n_cores" required>
+
+                <label for="pc">Primary Camera megapixels:</label>
+                <input type="number" class="form-control" id="pc" name="pc" required>
+
+                <label for="px_height">Pixel Resolution Height:</label>
+                <input type="number" class="form-control" id="px_height" name="px_height" required>
+
+                <label for="px_width">Pixel Resolution Width:</label>
+                <input type="number" class="form-control" id="px_width" name="px_width" required>
+
+                <label for="ram">Random Access Memory in Megabytes:</label>
+                <input type="number" class="form-control" id="ram" name="ram" required>
+
+                <label for="sc_h">Screen Height of mobile in cm:</label>
+                <input type="number" class="form-control" id="sc_h" name="sc_h" required>
+
+                <label for="sc_w">Screen Width of mobile in cm:</label>
+                <input type="number" class="form-control" id="sc_w" name="sc_w" required>
+
+                <label for="talk_time">ongest time that a single battery charge will last when you are:</label>
+                <input type="number" class="form-control" id="talk_time" name="talk_time" required>
+
+                <label for="three_g">Has 3G or not:</label>
+                <input type="number" class="form-control" id="three_g" name="three_g" required>
+
+                <label for="touch_screen">Has touch screen or not:</label>
+                <input type="number" class="form-control" id="touch_screen" name="touch_screen" required>
+
+
+                <label for="wifi">Has wifi or not:</label>
+                <input type="number" class="form-control" id="wifi" name="wifi" required>
+
+
+            </div>
+            <!-- Add similar form groups for other input fields -->
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+        {% if result %}
+        <h2>The price of this device is {{result}}</h2> 
+        {% endif %}
+    </div>
+    <footer><p>GoodBye</p></footer>
+</body>
+</html>
